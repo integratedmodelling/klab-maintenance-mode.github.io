@@ -1,20 +1,51 @@
 <!doctype html>
 <html lang="en" data-theme="light">
   <head>
+    <link rel="icon" href="favicon.ico"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <style>
       .center { text-align: center; }
+      .title { padding: 30px; }
+     .kh-link {
+          display: inline-block;
+          text-decoration: none;
+          color: #0277bd;
+          cursor: pointer;
+      }
+      .kh-link:not(.disabled):hover:after {
+          width: 100%;
+      }
+      .kh-link:after {
+          content: "";
+          display: block;
+          width: 0;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          transition: width 0.3s;
+      }
+      *, :after, :before {
+          box-sizing: inherit;
+          -webkit-tap-highlight-color: transparent;
+          -moz-tap-highlight-color: transparent;
+      }
+      header { display:flex; justify-content:space-between; align-items:center; }
+      
     </style>
     <title>Maintenance mode</title>
   </head>
   <body>
-    <main class="container center">
+    <main class="container">
       <article>
-        <header><img src="/img/im_header_logo.png"/></header>
-        <h3>Services are temporarily offline for maintenance</h3>
-        <p><a href="https://status.integratedmodelling.org/" target="_blank" alt="Chack status">Check status here</a></p>
+        <header>
+          <img src="img/imp_logo_100.png"/>
+          <img src="img/aries_logo_100.png"/>
+        </header>
+        <main class="center">
+        <h3 class="title">Services are temporarily offline for maintenance</h3>
+        <a class="kh-link center" href="https://status.integratedmodelling.org/" target="_blank" alt="Chack status">Check status here</a>
+        </main>
       </article>
     </main>
   </body>
